@@ -1,0 +1,21 @@
+{
+  "name": "gomiguide-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "gen": "FRONT=${FRONT:?definir FRONT} BACK=${BACK:?definir BACK} node scripts/generate-reference.cjs",
+    "sync": "node scripts/sync-docs.cjs",
+    "gen:all": "pnpm gen && pnpm sync"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.9",
+    "astro": "^7.3.6",
+    "sharp": "^0.35.3"
+  },
+  "description": "Documentación técnica de GomiGuide (front, back, auditorías y refactorización)"
+}
